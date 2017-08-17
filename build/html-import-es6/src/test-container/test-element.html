@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+</head>
+
+<body>
+    <dom-module id="test-element">
+        <template>
+            <h1>Hello from test-element</h1>
+            <p>[[prop1]]</p>
+        </template>
+        <script>
+            class TestElement extends Polymer.Element { static get is() { return 'test-element' } static get properties() { return { prop1: { type: String, value: 'Not Ready!' } } } constructor() { super(), console.info(TestElement.is + ': Created'), this.prop1 = 'Created' } connectedCallback() { super.connectedCallback(), console.info(TestElement.is + ': Connected Callback'), this.prop1 = 'Connected Callback' } ready() { super.ready(), console.info(TestElement.is + ': Ready'), this.prop1 = 'Ready' } } window.customElements.define(TestElement.is, TestElement);
+        </script>
+    </dom-module>
+</body>
+
+</html>

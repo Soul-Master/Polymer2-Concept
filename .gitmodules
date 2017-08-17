@@ -1,0 +1,3 @@
+[submodule "typings/polymer2"]
+	path = typings/polymer2
+	url = https://github.com/Soul-Master/Polymer2-typing.git

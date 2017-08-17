@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>test-app</title>
+
+  <script src="bower_components/babel/babel-helpers.js"></script>
+  <script>
+    if (!window.customElements) { document.write('<!--'); }
+  </script>
+  <script src="bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <!--! do not remove -->
+  <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="bower_components/polymer/polymer.js"></script>
+</head>
+
+<body>
+  <div hidden="" by-polymer-bundler="">
+    <dom-module id="test-element" assetpath="src/test-container/">
+      <template>
+        <h1>Hello from test-element</h1>
+        <p>[[prop1]]</p>
+      </template>
+      <script>
+        var TestElement = function (a) { function b() { babelHelpers.classCallCheck(this, b); var c = babelHelpers.possibleConstructorReturn(this, (b.__proto__ || Object.getPrototypeOf(b)).call(this)); return console.info(b.is + ': Created'), c.prop1 = 'Created', c } return babelHelpers.inherits(b, a), babelHelpers.createClass(b, null, [{ key: 'is', get: function () { return 'test-element' } }, { key: 'properties', get: function () { return { prop1: { type: String, value: 'Not Ready!' } } } }]), babelHelpers.createClass(b, [{ key: 'connectedCallback', value: function () { babelHelpers.get(b.prototype.__proto__ || Object.getPrototypeOf(b.prototype), 'connectedCallback', this).call(this), console.info(b.is + ': Connected Callback'), this.prop1 = 'Connected Callback' } }, { key: 'ready', value: function () { babelHelpers.get(b.prototype.__proto__ || Object.getPrototypeOf(b.prototype), 'ready', this).call(this), console.info(b.is + ': Ready'), this.prop1 = 'Ready' } }]), b }(Polymer.Element); window.customElements.define(TestElement.is, TestElement);
+      </script>
+    </dom-module>
+    <dom-module id="test-container" assetpath="src/test-container/">
+      <template>
+        <h1>Hello from test-container</h1>
+        <div style="border: 1px solid red">
+          <test-element></test-element>
+        </div>
+      </template>
+      <script>
+        var TestContainer = function (a) { function b() { babelHelpers.classCallCheck(this, b); var c = babelHelpers.possibleConstructorReturn(this, (b.__proto__ || Object.getPrototypeOf(b)).call(this)); return console.info(b.is + ': Created'), c.prop1 = 'Created', c } return babelHelpers.inherits(b, a), babelHelpers.createClass(b, null, [{ key: 'is', get: function () { return 'test-container' } }, { key: 'properties', get: function () { return { prop1: { type: String, value: 'Not Ready!' } } } }]), babelHelpers.createClass(b, [{ key: 'connectedCallback', value: function () { babelHelpers.get(b.prototype.__proto__ || Object.getPrototypeOf(b.prototype), 'connectedCallback', this).call(this), console.info(b.is + ': Connected Callback'), this.prop1 = 'Connected Callback' } }, { key: 'ready', value: function () { babelHelpers.get(b.prototype.__proto__ || Object.getPrototypeOf(b.prototype), 'ready', this).call(this), console.info(b.is + ': Ready'), this.prop1 = 'Ready' } }]), b }(Polymer.Element); window.customElements.define(TestContainer.is, TestContainer);
+      </script>
+    </dom-module>
+  </div>
+  <test-container></test-container>
+</body>
+
+</html>
