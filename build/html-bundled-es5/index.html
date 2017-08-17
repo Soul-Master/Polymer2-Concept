@@ -11,11 +11,18 @@
   </script>
   <script src="bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
   <!--! do not remove -->
-  <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-  <script src="bower_components/polymer/polymer.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>  
 </head>
 
 <body>
+  <script src="bower_components/polymer/polymer.js"></script>
+  <script>  
+    // Patch Polymer Element to disable shadow DOM
+    // TODO: Completely remove shadow DOM in Polymer.js
+    Polymer.Element.prototype._attachDom = function (node) {
+      this.appendChild(node);
+    };
+  </script>
   <div hidden="" by-polymer-bundler="">
     <dom-module id="test-element" assetpath="src/test-container/">
       <template>

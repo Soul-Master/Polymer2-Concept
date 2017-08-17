@@ -2,6 +2,13 @@
 
 <head>
     <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+    <script>
+        // Patch Polymer Element to disable shadow DOM
+        // TODO: Completely remove shadow DOM in Polymer.js
+        Polymer.Element.prototype._attachDom = function (node) {
+            this.appendChild(node);
+        };
+    </script>
     <link rel="import" href="test-element.html">
 </head>
 
