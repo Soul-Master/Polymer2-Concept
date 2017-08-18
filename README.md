@@ -30,10 +30,14 @@ https://cdn.rawgit.com/Soul-Master/Polymer2-Concept/master/build/html-bundled-es
 
 https://cdn.rawgit.com/Soul-Master/Polymer2-Concept/master/build/html-bundled-es5/
 
+- `ES6` Pure
+
+https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES6/master/index.html
+
 - `ES5` Pure
 
 https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES5/master/
 
-- `ES6` Pure
+For IE with dev tool, it might raise exception.
 
-https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES6/master/index.html
+![capture](https://user-images.githubusercontent.com/442046/29449839-7e8634e2-8426-11e7-84f0-e640461f7060.PNG)
