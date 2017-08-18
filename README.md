@@ -38,6 +38,15 @@ https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES6/master/index.html
 
 https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES5/master/
 
-For IE with dev tool, it might raise exception.
+**For ES5 browser, please manually define custom element after `webcomponentsready` event is fired.**
 
+```
+window.addEventListener('WebComponentsReady', function () {
+   var TestElement = function TestElement() { ... };
+   
+   window.customElements.define(TestElement.is, TestElement);
+});
+```
+
+*For IE with dev tool, it might raise exception.*
 ![capture](https://user-images.githubusercontent.com/442046/29449839-7e8634e2-8426-11e7-84f0-e640461f7060.PNG)
