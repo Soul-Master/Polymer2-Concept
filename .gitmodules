@@ -1,6 +1,9 @@
 [submodule "typings/polymer2"]
 	path = typings/polymer2
 	url = https://github.com/Soul-Master/Polymer2-typing.git
-[submodule "build/pure-js-es5"]
-	path = build/pure-js-es5
+[submodule "build/pure-es5"]
+	path = build/pure-es5
 	url = https://github.com/Soul-Master/Polymer2-Pure-JS.git
+[submodule "build/pure-es6"]
+	path = build/pure-es6
+	url = https://github.com/Soul-Master/Polymer2-Pure-ES6.git
