@@ -34,6 +34,6 @@ https://cdn.rawgit.com/Soul-Master/Polymer2-Concept/master/build/html-bundled-es
 
 https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES5/master/
 
-- `ES6` 
+- `ES6` Pure
 
-https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES6/master/
+https://cdn.rawgit.com/Soul-Master/Polymer2-Pure-ES6/master/index.html
